@@ -1,4 +1,5 @@
-# c-#include <stdio.h>
+# c self-learning
+#include <stdio.h>
 int main()
 {
 	int x ;
