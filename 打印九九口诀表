@@ -1,0 +1,25 @@
+#include <stdio.h>
+int main ()
+{
+	int i,j; 
+	for (i=1;i<10;i++){
+		for (j=1;j<10;j++){
+			if (j<=i){
+				printf("%d * %d=%d  ",j,i,i*j);
+/* i=1 j=1
+   i=2 j=1 j=2
+   i=3 j=1 j=2 j=3
+   每次进入i下一次 循环 就要换行 
+   必须 j 小于等于 i 才输出
+*/
+    
+			}
+			if (i*j<10){
+				printf(" ");
+	// 因为大于十会有两位 就会不对齐 所以 个位数 要加空格 
+			}
+		}
+		printf("\n");
+	} 
+	return 0;
+}
