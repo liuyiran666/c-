@@ -1,0 +1,42 @@
+#include <stdio.h>
+int main()
+{
+	int N;
+	scanf ("%d",&N);
+	int number = 0;
+	int a ;
+	int first = 1;
+	int second;
+	int i = 1;
+	int x;
+	while (i<N){
+		first = first * 10 ;
+		i++;
+	}
+	i =first;
+	second = first * 10 -1;
+	while (i >= first && i <= second) {
+		x=i;
+	    while (x>0){
+		a=x%10;
+		x=x/10;
+		//number = number+pow(a,N);
+		int p=a;
+		number = number +p;
+		int j = 1;
+		while (j<N){
+		   p=p*a;
+		   j++;
+    	}
+    }
+		
+		if (number == i){
+			printf("%d\n",i);
+		}
+		i=i+1;
+		number = 0;
+		
+	}
+	
+	return 0; 
+} 
