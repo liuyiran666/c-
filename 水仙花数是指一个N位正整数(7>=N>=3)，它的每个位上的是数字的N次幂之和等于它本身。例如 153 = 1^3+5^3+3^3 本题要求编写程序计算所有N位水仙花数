@@ -2,8 +2,8 @@
 int main()
 {
 	int N;
-	scanf ("%d",&N);
-	int number = 0;
+	scanf ("%d",&N);//获得位数 
+	int number = 0;//存三次方之和 
 	int a ;
 	int first = 1;
 	int second;
@@ -12,22 +12,22 @@ int main()
 	while (i<N){
 		first = first * 10 ;
 		i++;
-	}
+	}//这步是获取初始值与最终值  例如 3 位数要从100 开始 到999结束  first是初始值 second是最终值 
 	i =first;
 	second = first * 10 -1;
 	while (i >= first && i <= second) {
-		x=i;
+		x=i;//i在分解过程中会变化 所以要用x提取i  
 	    while (x>0){
 		a=x%10;
-		x=x/10;
+		x=x/10;//分解数 获取各个位 
 		//number = number+pow(a,N);
-		int p=a;
-		number = number +p;
-		int j = 1;
-		while (j<N){
+		int p=1;// p是每次循环的最后一位  
+		int j = 1;//j是获取最后一位循环的循环变量 
+		while (j<=N){
 		   p=p*a;
-		   j++;
-    	}
+		   j++; 
+    	}//获得最后一位的三次方 
+		number = number +p;
     }
 		
 		if (number == i){
