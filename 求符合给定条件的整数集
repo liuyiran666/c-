@@ -4,13 +4,22 @@ int main()
 	int a;
 	scanf("%d",&a);
 	int i,j,k;
+	int cnt = 0;
 	for (i=a;i<a+4;i++){
 		for ( j=a;j<a+4;j++){
-			for (k=a;k<a+4;k++){
+			for (k=a;k<a+4;k++){// 先做各种组合 222 223 224 225 232 233 234 235 242 .... 所有都 排列出来  
 				if (i!=j && j!=k && k!=i){
-					printf ("%d%d%d ",i,j,k);
+					printf ("%d%d%d ",i,j,k);//再选择没有重复数字的出来即可 
+					cnt++; // cnt是计数器  每次判断出满足条件的整数的时候  就可以+1  
+					if (cnt==6){
+						printf ("\n");
+						cnt=0; //满10就可以变为0 
+					}else {
+						printf (" ");
+					}
+					 
 				} 
-			} 
-		}   printf(" \n");
+			} cnt=0;
+		}    
 	} 
 } 
