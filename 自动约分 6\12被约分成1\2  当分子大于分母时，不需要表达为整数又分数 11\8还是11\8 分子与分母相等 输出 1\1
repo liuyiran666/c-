@@ -1,0 +1,16 @@
+#include <stdio.h>
+int main(){
+    int dividend ,divisor;
+	scanf("%d/%d",&dividend,&divisor);
+	int a=dividend;
+	int b = divisor;
+	while (b>0){
+		int m=a%b;
+		a=b;
+		b=m;	
+	}
+	int gys=a;
+	printf("%d/%d",dividend/gys,divisor/gys);
+	 
+	return 0;
+}
