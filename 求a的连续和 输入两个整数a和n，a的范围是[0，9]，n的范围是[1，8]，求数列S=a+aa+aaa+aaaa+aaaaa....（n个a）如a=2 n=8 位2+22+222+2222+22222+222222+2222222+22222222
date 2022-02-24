@@ -1,0 +1,17 @@
+#include <stdio.h>
+int main(){
+	int i=1;
+	int a;
+	int n;
+	int mask=1;
+	int sum=0;
+	scanf("a=%d n=%d",&a,&n);
+	int t=a;
+	for (i=1;i<=n;i++){
+		mask = mask*10;
+		sum=sum+a;
+		a=a+t*mask;
+	}
+	printf("sum=%d",sum);
+	return 0;
+}
