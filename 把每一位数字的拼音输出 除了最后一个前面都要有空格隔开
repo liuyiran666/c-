@@ -1,66 +1,37 @@
 #include <stdio.h>
-int main()
-{
-	int x ;
-	int i=1;
+int main(){
+	int x;
 	scanf("%d",&x);
-	int mask=1;
 	if (x<0){
 		printf("fu ");
-		x=-1*x;
+		x=-x;
 	}
-	int t = x ;
-    
-	while (x>9){
-		x=x/10;
-		i=i+1;
-		mask=mask*10;
-		
-	}	   
-	
-	int d;       
-	                
-	while (i!=0){
-		d = t/mask;
-		t = t%mask;
+	int mask=1;
+	int t = x;
+	while (t>9){
+		t=t/10;
+		mask*=10;
+	}
+	while (x>0){
+		int d=x/mask;
+		x=x%mask;
 		mask=mask/10;
-		i=i-1;
-		switch (d){
-			case 0 :
-				printf("ling");
-				break;
-			case 1 :
-				printf("yi");
-				break;
-			case 2 :
-				printf("er");
-				break;
-			case 3 :
-				printf("san");
-				break;
-			case 4 :
-				printf("si");
-				break;
-			case 5 :
-				printf("wu");
-				break;
-			case 6 :
-				printf("liu");
-				break;
-			case 7 :
-				printf("qi");
-				break;
-			case 8 :
-				printf("ba");
-				break;
-			case 9 :
-				printf("jiu");
-				break;			
+		switch (d) {
+			case 1:printf("yi");break;
+			case 2:printf("er");break;
+			case 3:printf("san");break;
+			case 4:printf("si");break;
+			case 5:printf("wu");break;
+			case 6:printf("liu");break;
+			case 7:printf("qi");break;
+			case 8:printf("ba");break;
+			case 9:printf("jiu");break;
+			case 0:printf("ling");break;	
+		
 		}
-		if (i!=0){
-				printf(" "); 
-			}
+		if (mask!=0) {
+			printf(" ");
+		}
 	}
-	
 	return 0;
 }
