@@ -1,0 +1,41 @@
+7,#include<stdio.h> 
+int main()
+{
+int a=2,b=3;
+float x=3.5,y=2.5,z;
+z=(float)(a+b)/2+(int)x%(int)y;
+printf("%f\n",z);
+return 0;
+}
+
+
+9,#include<stdio.h> 
+int main()
+{
+int init=2,result;
+printf("The result is%d,%d\n",result=init+8,(result,init));
+}
+
+8,#include<stdio.h> 
+int main()
+{
+int a,n;
+a=12;
+a+=a;
+printf("%d\n",a);
+a=12;
+a*=2+3;
+printf("%d\n",a);
+
+a=12;
+a/=a+a;
+printf("%d\n",a);
+a=12;
+n=5;
+a%=(n%=2);
+printf("%d\n",a);
+a=12;
+a+=a-=a*=a;
+printf("%d\n",a);
+return 0;
+}
